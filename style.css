@@ -30,10 +30,21 @@ main{
 
 h1{
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .inputs{
     display: flex;
+}
+
+.result{
+    font-size: 1.3rem;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+.result::first-letter{
+    text-transform: capitalize;
 }
 
 input{

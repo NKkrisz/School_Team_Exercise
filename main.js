@@ -10,7 +10,7 @@ document.querySelector('.guesses').innerText = `Életed: ${lives}`;
 let randomNumber = generateRandomNr(1,10)
 
 document.querySelector("#check").addEventListener("click", () => {
-    inputNumber =  input.value;
+    let inputNumber =  input.value;
     try {
         inputNumber = parseInt(inputNumber);
         if(isNaN(inputNumber)){
