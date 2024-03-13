@@ -21,5 +21,6 @@ document.querySelector("#check").addEventListener("click", () => {
     }
     console.log(inputNumber, randomNumber);
     const result = compareNumbers(randomNumber, inputNumber);
+    document.querySelector('.result').innerHTML = result
     // TODO: display result in the result div
 });
