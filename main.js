@@ -4,8 +4,10 @@ import { compareNumbers } from "./scripts/compareNumbers.js";
 let input =  document.querySelector("#inputNumber");
 input.value = "";
 
+let lives = 5;
+document.querySelector('.guesses').innerText = `Életed: ${lives}`;
+
 let randomNumber = generateRandomNr(1,10)
-console.log(randomNumber);
 
 document.querySelector("#check").addEventListener("click", () => {
     inputNumber =  input.value;
@@ -19,8 +21,16 @@ document.querySelector("#check").addEventListener("click", () => {
         console.error("Nem számot adtál meg!");
         return;
     }
-    console.log(inputNumber, randomNumber);
+    
     const result = compareNumbers(randomNumber, inputNumber);
-    document.querySelector('.result').innerHTML = result
-    // TODO: display result in the result div
+    if(!result.includes("helyes")){
+        lives--;
+        document.querySelector('.guesses').innerText = `Életed: ${lives}`;
+    }
+
+    document.querySelector('.result').innerText = result
+    if(lives === 0){
+        alert("Vesztettél")
+        location.reload();
+    }
 });
