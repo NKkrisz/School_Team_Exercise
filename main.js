@@ -26,6 +26,9 @@ document.querySelector("#check").addEventListener("click", () => {
     if(!result.includes("helyes")){
         lives--;
         document.querySelector('.guesses').innerText = `Életed: ${lives}`;
+    } else {
+        alert("Nyertél")
+        location.reload();
     }
 
     document.querySelector('.result').innerText = result
