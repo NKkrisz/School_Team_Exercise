@@ -1,6 +1,80 @@
+:root{
+    --input_text:#E94F37;
+    --main_text: #F6F7EB;
+    --button: #5C415D;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+
 main{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+.container{
+    background-color: #393E41;
+    color: var(--main_text);
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 8px;
+
+}
+
+h1{
+    margin-bottom: 20px;
+}
+
+.inputs{
+    display: flex;
+}
+
+input{
+    padding: 8px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border: none;
+    color: var(--input_text);
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+input::placeholder{
+    color: var(--input_text);
+}
+
+button{
+    padding: 8px;
+    border: none;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background-color: var(--button);
+    color: var(--main_text);
+    font-size: 1.3rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: ease-in-out 300ms;
+}
+
+button:hover{
+    background-color: white;
+    color: var(--button);
+}
+
+.inputs + p{
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-top: 20px;
+
+}
+
+.guesses{
+    color: var(--input_text);
 }
