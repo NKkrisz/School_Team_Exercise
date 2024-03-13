@@ -7,3 +7,5 @@ export function compareNumbers(generatedNumber,guessNumber){
         return "a te számod kisebb"
     }
 }
+
+console.log(compareNumbers(46,50))
