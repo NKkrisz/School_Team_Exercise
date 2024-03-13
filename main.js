@@ -9,7 +9,7 @@ document.querySelector('.guesses').innerText = `Életed: ${lives}`;
 
 let randomNumber = generateRandomNr(1,10)
 
-document.querySelector("#check").addEventListener("click", () => {
+function check(){
     let inputNumber =  input.value;
     try {
         inputNumber = parseInt(inputNumber);
@@ -27,10 +27,12 @@ document.querySelector("#check").addEventListener("click", () => {
         lives--;
         document.querySelector('.guesses').innerText = `Életed: ${lives}`;
     }
-
+    
     document.querySelector('.result').innerText = result
     if(lives === 0){
         alert("Vesztettél")
         location.reload();
     }
-});
+}
+
+document.querySelector("#check").addEventListener("click", check)
